@@ -20,7 +20,6 @@ training:
   bn_wd: 0
   distributed: 1
   epochs: 40
-  warmup: 10
   label_smoothing: 0.1
   momentum: 0.9
   optimizer: sgd
