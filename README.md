@@ -1,3 +1,30 @@
+# Matryoshka Representation Learning: Geometry aware version
+
+*This repository builds upon the original work of Kusupati et al. (2022), extending the Matryoshka Representation Learning (MRL) framework with additional diffusion-inspired kernel convolution techniques and angular consistency losses.*
+
+Learned representations in large-scale classification and retrieval tasks are often rigid and flat, making them inefficient for scalable or adaptive deployment. **Matryoshka Representation Learning (MRL)** addresses these limitations with nested, adaptable representations. This fork augments the original MRL formulation with **diffusion-inspired radial regularization** and **dot-product angular consistency loss** to further improve generalization and geometric consistency.
+
+This repository retains the training, evaluation, and analysis framework from the original MRL implementation (Kusupati et al.), with new loss modules and scheduling logic for auxiliary regularization. The original authors and architecture are credited below. All original instructions remain valid for setting up, training, and evaluating models.
+
+## Key Enhancements in This Fork
+
+- 📐 **Angular Consistency Loss**: Encourages consistent angular alignment across nesting dimensions.
+- 🌊 **Radial Diffusion Regularization**: Controls representation spread across the embedding space using kernel-convolution.
+- 🔁 **Warmup Scheduler**: Auxiliary losses are activated after a configurable warmup period. 
+- 🪙 **Loss Weights**:
+  - Radial Loss: default weight `0.01`
+  - Angular Loss: default weight `0.01`
+  - These weights can be adjusted in the `loss_config.yaml` file or as CLI overrides.
+
+## Set Up
+
+Same as original:
+
+
+
+
+----------------------------------- ORIGINAL REPOSITORY -----------------------
+
 # [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147)
 _Aditya Kusupati*, Gantavya Bhatt*, Aniket Rege*, Matthew Wallingford, Aditya Sinha, Vivek Ramanujan, William Howard-Snyder, Kaifeng Chen, Sham Kakade, Prateek Jain, Ali Farhadi_
 
